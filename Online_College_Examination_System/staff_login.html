@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff login</title>
+    <link rel="stylesheet" href="student_login.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Staff Login</h1>
+        <form method="post" action="staff_login.php" >
+            <div class="txt_field">
+                <input type="email" name="EID"  required>
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" name="PASS"  required>
+                <span></span>
+                <label>PASS</label>
+            </div>
+            <div class="pass"><a href="staff_forgot_pass/forgot.php">Forgot password?</div></a> 
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Not a member?<a href="staff_reg.html">Registration</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

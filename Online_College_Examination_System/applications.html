@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Applications page</title>
+        <link rel="stylesheet" href="applications.css" type="text/css">
+        <style>
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+        .banner
+            {
+                width: 100%;
+                height: 100%;
+                background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+                background-size: cover;
+                background-position: center;
+            }
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 8px 4px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+            }
+            .button2:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            .button span {
+                            cursor: pointer;
+                            display: inline-block;
+                            position: relative;
+                            transition: 0.5s;
+                        }
+                        .button span:after {
+                            content: '\00bb';
+                            position: absolute;
+                            opacity: 0;
+                            top: 0;
+                            right: -20px;
+                            transition: 0.5s;
+                        }
+                        .button:hover span {
+                            padding-right: 25px;
+                        }
+                        .button:hover span:after {
+                            opacity: 1;
+                            right: 0;
+                        }
+
+            .navbar {
+                                width: 20%;
+                                margin-top: 10px;
+                                margin: auto;
+                                padding: 35px 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                        }
+                        .navbar ul li{
+                                list-style: none;
+                                display: inline-block;
+                                margin-left: 20px;
+                                margin-right: 10px;
+                                position: relative;
+                        }
+                        .navbar ul li a{
+                                text-decoration: none;
+                                color: rgb(248, 246, 246);
+                                text-transform: uppercase;
+                        }
+                        .navbar ul li::after{
+                                content: '';
+                                height: 3px;
+                                width: 0;
+                                background: rgb(22, 17, 17);
+                                position: absolute;
+                                left: 0;
+                                bottom: -10px;
+                                transition: 0.5s;
+                        }
+                        .navbar ul li:hover::after{
+                                width: 100%;
+                        }
+            
+          </style>
+    </head>
+    <body>
+        <div class="banner" style="background-image: url(coe.jpg)">
+            <button class="button" style="background-color:rgb(62, 5, 67); color: rgb(241, 241, 236); text-decoration:solid; font-weight: bold;font-size: 30px;" >Applications</button>
+                
+                <button style="background-color:rgb(10, 112, 171); color: azure; float: right; vertical-align:middle" class="button " onclick="location.href='stud_home_page.html'"><span>BACK</span></button>
+        <div class = "main">
+            <div class = "register">
+                <h2>
+                    Fill the Application 
+                </h2>
+                
+                
+                <form id = "register"    method = "POST" action="applications_insert.php" enctype="multipart/form-data" >
+                
+                <label>PRN : </label>
+                 <br>
+                 <input type="text" name = "prn" id = "name" placeholder = "Enter Your PRN" required/>
+                 <br><br>
+
+                 <label>Name : </label>
+                 <br>
+                 <input type="text" name="fullname" id="name" placeholder="Enter your Name" required/>
+                 <br><br>
+                
+                 <label>Email : </label>
+                 <br>
+                 <input type="email" name="email" id="name"  placeholder="Enter your Email" required/>
+                 <br><br>
+                 
+                 <label>Contact : </label>
+                 <br>
+                 <input type="number" name="contact" id="name" placeholder="Enter your Mobile Number" required/>
+                 <br><br>
+
+                 <label for="department">Department : </label>
+                 
+                 <select name="department" id="department">
+                    <option value="Computer">Computer</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Civil">Civil</option>
+                    <option value="ENTC">ENTC</option>
+                    <option value="MCA">MCA</option>
+                    <option value="ME">ME</option>
+                 </select>
+                 &nbsp;
+                 <!--<span id="Computer">Computer</span>
+                 
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="department" id="Mechanical" value="Mechanical" required>
+                 &nbsp;
+                 <span id="Mechanical">Mechanical</span>
+                 
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="department" id="Electrical" value="Electrical" required>
+                 &nbsp;
+                 <span id="Electrical">Electrical</span>
+                 
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="department" id="Civil" value="Civil" required>
+                 &nbsp;
+                 <span id="Civil">Civil</span>
+
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="department" id="ENTC" value="ENTC" required>
+                 &nbsp;
+                 <span id="ENTC">ENTC</span>
+                 
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="department" id="MCA" value="MCA" required>
+                 &nbsp;
+                 <span id="MCA">MCA</span>
+                 -->
+
+                 
+                 
+
+                 <label for="years">Year: </label>
+                 
+                 <select name="years" id="years">
+                    <option value="FE">FE</option>
+                    <option value="SE">SE</option>
+                    <option value="TE">TE</option>
+                    <option value="BE">BE</option>
+                 </select>
+                 <!--<input type="radio" name="years" id="FE" value="FE" required>
+                 &nbsp;
+                 <span id="FE">FE</span>
+
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="years" id="SE" value="SE" required>
+                 &nbsp;
+                 <span id="SE">SE</span>
+
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="years" id="TE" value="TE" required>
+                 &nbsp;
+                 <span id="TE">TE</span>
+
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="years" id="BE" value="BE" required>
+                 &nbsp;
+                 <span id="BE">BE</span>
+                 -->
+
+
+                 <br><br>
+
+                 <label for="application_type">Application Type</label>
+                 
+                 <select name="application_type" id="application_type">
+                    <option value="No Backlog">No Backlog</option>
+                    <option value="Transcripts">Transcripts</option>
+                 </select>
+
+                 <!--<input type="radio" name="application_type" id="No Backlog" value="No backlog" required>
+                 &nbsp;
+                 <span id="No Backlog">No Backlog</span>
+
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="application_type" id="Transcripts" value="Transcripts" required>
+                 &nbsp;
+                 <span id="Transcripts">Transcripts</span>
+                 -->
+
+                 <br><br>
+                 <p>*Please merge all semester results in single PDF*</p>
+                 <br><br>
+
+                 <label for="Transcripts">Upload Marksheets:</label>
+                 <input type="file" id="Transcripts" name="Transcripts">
+
+                 <br><br>
+                 <p>*Please download the appropriate word file, fill the details in it and upload*</p>
+                 <br><br>
+                 <a href="LOR HOD.docx">Download</a>
+                 <br><br>
+
+                 <label for="Word">Upload Word File:</label>
+                 <input type="file" id="Word" name="Word">
+
+                 <br><br>
+
+                 <input type="submit" value="submit" name="submit" id="submit">
+
+
+
+                 
+                
+                 
+                
+                 
+
+
+
+
+                </form>
+
+            </div><!--end register-->
+        </div><!--end main-->
+    </body>
+    <script>
+
+    function submitForm() {
+        // Display a confirmation box
+        var result = confirm("Are you sure you want to submit this form?");
+      
+        // Check the user's choice
+        if (result) {
+          // Form submission code here
+          // ...
+          var filePath = "index.php";
+      
+          // Display success message
+          alert("Form submitted successfully!");
+          
+      
+          // Optional: Prevent the form from actually submitting
+          return false;
+        } else {
+          // If the user clicked "Cancel", do nothing
+          return false;
+        }
+      }
+      
+    
+</script>      
+</html>

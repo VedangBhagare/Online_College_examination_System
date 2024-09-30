@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>principal_home_page</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            .banner
+            {
+                width: 100%;
+                height: 100vh;
+                background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+                background-size: cover;
+                background-position: center;
+            }
+            .navbar
+            {
+                width: 20%;
+                margin-top: 10px;
+                margin: auto;
+                padding: 35px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .logo
+            {
+                width: 120px;
+                cursor: pointer;
+                
+        
+            }
+            .navbar ul li
+            {
+                list-style: none;
+                display: inline-block;
+                margin-left: 20px;
+                margin-right: 10px;
+                
+                position: relative;
+            }
+            .navbar ul li a
+            {
+                text-decoration: none;
+                color: rgb(248, 246, 246);
+                text-transform: uppercase;
+            }
+            .navbar ul li::after
+            {
+                content: '';
+                height: 3px;
+                width: 0;
+                background: rgb(22, 17, 17);
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                transition: 0.5s;
+            }
+            .navbar ul li:hover::after
+            {
+                width: 100%;
+            }
+            .button 
+            {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;       
+            }
+            .button1{
+                    display: inline-block;
+                    border-radius: 4px;
+                    background-color: #f4511e;
+                    border: none;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-size: 28px;
+                    padding: 20px;
+                    width: 200px;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    margin: 5px;
+                    }
+                    .button span {
+                                    cursor: pointer;
+                                    display: inline-block;
+                                    position: relative;
+                                    transition: 0.5s;
+                                    }
+
+                                    .button span:after {
+                                    content: '\00bb';
+                                    position: absolute;
+                                    opacity: 0;
+                                    top: 0;
+                                    right: -20px;
+                                    transition: 0.5s;
+                                    }
+
+                                    .button:hover span {
+                                    padding-right: 25px;
+                                    }
+
+                                    .button:hover span:after {
+                                    opacity: 1;
+                                    right: 0;
+                                    }
+        </style>
+    </head>
+
+    <body>
+        <div class="banner" style="background-image: url(coe.jpg)"><br>
+        <button class="button" style="background-color:rgb(62, 5, 67); color: rgb(241, 241, 236); text-decoration:solid; font-weight: bold;font-size: 30px;" >Welcome Principal</button>
+        <button style="background-color:rgb(10, 112, 171); color: azure; float: right; vertical-align:middle" class="button" onclick="location.href='index.php'"><span>LOG OUT</span></button>
+        <div class="navbar" >
+            <ul>
+                <br><br><br><br><br><br><br>
+                <li><a href="coe_notice.php">Upload Notices</a></li><br><br>
+                <li><a href="#">View Exam Schedule</a></li><br><br>
+                <li><a href="#">Students Applications</a></li><br><br>
+            </ul>
+        </div>
+        </div>
+    </body>
+</html>
